@@ -2,6 +2,8 @@
 
 A basic animated menu that (sorta) mimics Path's navigation UI. Please __do not use it "as is"__ to avoid similarities from the original. Style the CSS a bit. __Note: Not thoroughly tested in old browsers. Be wary.__
 
+preview: http://jamesflorentino.com/orbitalmenu/
+
 ## Technical details
 
 It utilizes css3 transforms and transitions to facilitate the animation. It is currently not tested in IE8- so be wary of using it for actual production.
