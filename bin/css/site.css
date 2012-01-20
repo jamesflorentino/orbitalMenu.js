@@ -1,8 +1,10 @@
 body {
   background: #ded;
   font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: normal;
   margin: 0; padding: 0;
 }
+
 
 #controls {
   position: absolute;
@@ -18,7 +20,7 @@ h1 {
   margin: auto;
   text-align: left;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 22px;
   background: white;
   height: 40px;
   line-height: 40px;
@@ -43,4 +45,5 @@ h1 {
 h1, .description {
   background: #922;
   color: white;
+  letter-spacing: 1px;
 }
