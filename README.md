@@ -1,16 +1,16 @@
 # orbitalMenu.js
 
-A basic animated menu that (sorta) mimics Path's navigation UI. Please __do not use it "as is"__ to avoid similarities from the original. Style the CSS a bit. _Note: Not thoroughly tested in old browsers. Be wary._
+A basic animated menu that (sorta) mimics Path's navigation UI. Please __do not use it "as is"__ to avoid similarities from the original. Style the CSS a bit. _Note: Not thoroughly tested on old browsers. Be wary._
 
 preview: http://jamesflorentino.com/orbitalmenu/
 
 ## Technical details
 
-It utilizes css3 transforms and transitions to facilitate the animation.
+It utilizes css3 transforms and transitions to facilitate the animation. It adds a transitionDelay style property when toggling between the expanded and contracted states. 
 
 ## HTML Markup
 
-This is the basic HTML template. You only need to append the `<nav class="orbitalMenu">` element with the HTML `<a>` tag. It doesn't matter how many they are as long as you set the width and height of `#controls`
+This is the basic HTML template. You only need to append the `<nav class="orbitalMenu">` element with the HTML `<a>` tag. It doesn't matter how many they are as long as you set the width and height of the `#controls` so the items in the menu will fit.
 
 ```html
 <div id="controls" class="orbitalMenu">
