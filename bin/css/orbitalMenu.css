@@ -1,0 +1,97 @@
+.orbitalMenu a,
+.orbitalMenu .switch {
+  position: absolute;
+  display: block;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  margin: -15px 0 0 -15px;
+  background: #d00;
+  color: white;
+  line-height: 26px;
+  font-size: 24px;
+  text-align: center;
+  border: 2px solid white;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(255,255,255,0.5) inset;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.orbitalMenu {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0 0 -50px;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.orbitalMenu a {
+  width: 34px;
+  height: 34px;
+  border-radius: 34px;
+  line-height: 34px;
+  margin: -17px 0 0 -17px;
+  font-size: 14px;
+}
+
+/** add some transition, yo **/
+.orbitalMenu.visible a {
+  -webkit-transition: .3s cubic-bezier(0, 0.5, 0, 1);
+  -moz-transition: .3s cubic-bezier(0, 0.5, 0, 1);
+  -o-transition: .3s cubic-bezier(0, 0.5, 0, 1);
+  -ms-transition: .3s cubic-bezier(0, 0.5, 0, 1);
+  transition: .3s cubic-bezier(0, 0.5, 0, 1);
+}
+
+.orbitalMenu .switch,
+.orbitalMenu.hidden a {
+  -webkit-transition: .3s cubic-bezier(1, 0, .58, 1);
+  -moz-transition: .3s cubic-bezier(1, 0, .58, 1);
+  -o-transition: .3s cubic-bezier(1, 0, .58, 1);
+  -ms-transition: .3s cubic-bezier(1, 0, .58, 1);
+  transition: .3s cubic-bezier(1, 0, .58, 1);
+}
+
+.orbitalMenu.visible .switch {
+  -webkit-transform: rotate(45deg);  
+  -moz-transform: rotate(45deg);  
+  -o-transform: rotate(45deg);  
+  -ms-transform: rotate(45deg);
+  background: #aaa;
+}
+
+.orbitalMenu.hidden a,
+.orbitalMenu a {
+  -webkit-transform: scale(.1) rotate(180deg);
+  -moz-transform: scale(.1) rotate(180deg);
+  -ms-transform: scale(.1) rotate(180eg);
+  -o-transform: scale(.1) rotate(180deg);
+  transform: scale(.1) rotate(180deg);
+  left: 50%;
+  top: 50%;
+}
+
+.orbitalMenu a,
+.orbitalMenu.visible a {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+  cursor: pointer;
+
+}
+
+.orbitalMenu .switch {
+  left: 50%;
+  top: 50%;
+  cursor: pointer;
+}
