@@ -5,8 +5,8 @@ var OrbitalMenu = (function() {
     _this = this;
 
     /** menu elements **/
-    this.container = document.getElementById(e.id);
-    this.el = this.container.getElementsByTagName('nav')[0];
+    this.container    = document.getElementById(e.id);
+    this.el           = this.container.getElementsByTagName('nav')[0];
     this.toggleButton = this.container.getElementsByClassName('switch')[0];
 
 
@@ -23,20 +23,19 @@ var OrbitalMenu = (function() {
 
     var items, centerX, centerY, elevation, radius, radian, item, i, left, top;
     
-    items = this.el.getElementsByTagName("a");
-
-    centerX = this.el.clientWidth * 0.5;
-    centerY = this.el.clientHeight * 0.5;
+    items     = this.el.getElementsByTagName("a");
+    centerX   = this.el.clientWidth * 0.5;
+    centerY   = this.el.clientHeight * 0.5;
     elevation = 360 / items.length;
-    radius = this.el.clientWidth * 0.5;
+    radius    = this.el.clientWidth * 0.5;
 
     i = 0;
     this.items = [];
     while ((item = items.item(i++))) {
 
       radian = elevation * i * (Math.PI / 180);
-      left = Math.sin(radian) * centerX + centerX;
-      top = Math.cos(radian) * centerY + centerY;
+      left   = Math.sin(radian) * centerX + centerX;
+      top    = Math.cos(radian) * centerY + centerY;
       item.style.webkitTransitionDelay =
       item.style.MozTransitionDelay =
       item.style.oTransitionDelay =

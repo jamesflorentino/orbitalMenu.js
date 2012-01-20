@@ -1,92 +1,94 @@
 .orbitalMenu a,
 .orbitalMenu .switch {
-  position: absolute;
-  display: block;
-  padding: 0;
-  width: 30px;
-  height: 30px;
-  margin: -15px 0 0 -15px;
-  background: #d00;
-  color: white;
-  line-height: 26px;
-  font-size: 24px;
-  text-align: center;
-  border: 2px solid white;
-  cursor: pointer;
-  border-radius: 20px;
-  -moz-line-height: 40px;
-  box-shadow: 0 4px 15px rgba(255,255,255,0.5) inset;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
+  position      : absolute;
+  display       : block;
+  padding       : 0;
+  width         : 30px;
+  height        : 30px;
+  margin        : -15px 0 0 -15px;
+  background    : #d00;
+  color         : white;
+  line-height   : 26px;
+  font-size     : 24px;
+  text-align    : center;
+  border        : 2px solid white;
+  cursor        : pointer;
+  border-radius : 20px;
+  box-shadow    : 0 4px 15px rgba(255,255,255,0.5) inset;
+
+  -webkit-user-select : none;
+  -khtml-user-select  : none;
+  -moz-user-select    : none;
+  -ms-user-select     : none;
+  -o-user-select      : none;
+  user-select         : none;
 }
 
 .orbitalMenu {
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  border: 0 solid white;
+  position : absolute;
+  top      : 0;
+  right    : 0;
+  bottom   : 0;
+  left     : 0;
+  border   : 0 solid white;
 }
 
 .orbitalMenu nav{
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  font-family: 'Helvetica', 'Arial', sans-serif;
-  border-radius: 100px;
-  background: rgba(1,1,1,0.1);
+  position      : absolute;
+  top           : 0;
+  left          : 0;
+  bottom        : 0;
+  right         : 0;
+  font-family   : 'Helvetica', 'Arial', sans-serif;
+  border-radius : 100px;
 }
 
-.orbitalMenu.hidden nav {
-  background: transparent;
+.orbitalMenu.visible nav {
+  background    : rgba(1,1,1,0.1);
 }
 
 .orbitalMenu a {
-  width: 34px;
-  height: 34px;
-  border-radius: 34px;
-  line-height: 34px;
-  margin: -17px 0 0 -17px;
-  font-size: 14px;
+  width         : 34px;
+  height        : 34px;
+  border-radius : 34px;
+  line-height   : 34px;
+  margin        : -17px 0 0 -17px;
+  font-size     : 14px;
 }
 
 /** add some transition, yo **/
 .orbitalMenu.visible a {
-  -webkit-transition: .3s cubic-bezier(0, 1, 0.5, 1);
-  -moz-transition: .3s cubic-bezier(0, 1, 0.5, 1);
-  -o-transition: .3s cubic-bezier(0, 1, 0.5, 1);
-  -ms-transition: .3s cubic-bezier(0, 1, 0.5, 1);
+  -webkit-transition : .3s cubic-bezier(0, 1, 0.5, 1);
+  -moz-transition    : .3s cubic-bezier(0, 1, 0.5, 1);
+  -o-transition      : .3s cubic-bezier(0, 1, 0.5, 1);
+  -ms-transition     : .3s cubic-bezier(0, 1, 0.5, 1);
 }
 
 .orbitalMenu nav,
 .orbitalMenu .switch,
 .orbitalMenu.hidden a {
-  -webkit-transition: .3s cubic-bezier(1, 0, .58, 1);
-  -moz-transition: .3s cubic-bezier(1, 0, .58, 1);
-  -o-transition: .3s cubic-bezier(1, 0, .58, 1);
-  -ms-transition: .3s cubic-bezier(1, 0, .58, 1);
-  transition: .3s cubic-bezier(1, 0, .58, 1);
+  -webkit-transition : .3s cubic-bezier(1, 0, .58, 1);
+  -moz-transition    : .3s cubic-bezier(1, 0, .58, 1);
+  -o-transition      : .3s cubic-bezier(1, 0, .58, 1);
+  -ms-transition     : .3s cubic-bezier(1, 0, .58, 1);
+  transition         : .3s cubic-bezier(1, 0, .58, 1);
 }
 
 .orbitalMenu.visible .switch {
-  -webkit-transform: rotate(45deg);  
-  -moz-transform: rotate(45deg);  
-  -o-transform: rotate(45deg);  
-  -ms-transform: rotate(45deg);
-  background: #aaa;
+  -webkit-transform : rotate(45deg);
+  -moz-transform    : rotate(45deg);
+  -o-transform      : rotate(45deg);
+  -ms-transform     : rotate(45deg);
+  background        : #aaa;
 }
 
 .orbitalMenu.hidden a,
 .orbitalMenu a {
-  -webkit-transform: scale(.1) rotate(180deg);
-  -moz-transform: scale(.1) rotate(180deg);
-  -ms-transform: scale(.1) rotate(180eg);
-  -o-transform: scale(.1) rotate(180deg);
-  transform: scale(.1) rotate(180deg);
+  -webkit-transform : scale(.1) rotate(180deg);
+  -moz-transform    : scale(.1) rotate(180deg);
+  -ms-transform     : scale(.1) rotate(180deg);
+  -o-transform      : scale(.1) rotate(180deg);
+  transform         : scale(.1) rotate(180deg);
 }
 
 .orbitalMenu .switch,
@@ -98,10 +100,10 @@
 
 .orbitalMenu a,
 .orbitalMenu.visible a {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  -o-transform: none;
-  transform: none;
+  -webkit-transform : none;
+  -moz-transform    : none;
+  -ms-transform     : none;
+  -o-transform      : none;
+  transform         : none;
 }
 

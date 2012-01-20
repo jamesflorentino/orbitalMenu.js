@@ -1,5 +1,7 @@
 body {
   background: #ded;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  margin: 0; padding: 0;
 }
 
 #controls {
@@ -9,4 +11,36 @@ body {
   width: 100px;
   height: 100px;
   margin: -50px 0 0 -50px;
+}
+
+h1 {
+  color: #a00;
+  margin: auto;
+  text-align: left;
+  font-weight: normal;
+  font-size: 24px;
+  background: white;
+  height: 40px;
+  line-height: 40px;
+  text-indent: 10px;
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  left: 0;
+}
+
+.description {
+  color: #922;
+  font-size: 18px;
+  position: absolute;
+  right: 10px;
+  bottom: 0px;
+  height: 40px;
+  line-height: 40px;
+
+}
+
+h1, .description {
+  background: #922;
+  color: white;
 }
