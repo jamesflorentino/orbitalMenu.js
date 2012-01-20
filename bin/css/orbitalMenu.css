@@ -14,6 +14,7 @@
   border: 2px solid white;
   cursor: pointer;
   border-radius: 20px;
+  -moz-line-height: 40px;
   box-shadow: 0 4px 15px rgba(255,255,255,0.5) inset;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -24,13 +25,24 @@
 }
 
 .orbitalMenu {
-  width: 100px;
-  height: 100px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -50px 0 0 -50px;
+  top: 0; right: 0; bottom: 0; left: 0;
+  border: 0 solid white;
+}
+
+.orbitalMenu nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   font-family: 'Helvetica', 'Arial', sans-serif;
+  border-radius: 100px;
+  background: rgba(1,1,1,0.1);
+}
+
+.orbitalMenu.hidden nav {
+  background: transparent;
 }
 
 .orbitalMenu a {
@@ -44,13 +56,13 @@
 
 /** add some transition, yo **/
 .orbitalMenu.visible a {
-  -webkit-transition: .3s cubic-bezier(0, 0.5, 0, 1);
-  -moz-transition: .3s cubic-bezier(0, 0.5, 0, 1);
-  -o-transition: .3s cubic-bezier(0, 0.5, 0, 1);
-  -ms-transition: .3s cubic-bezier(0, 0.5, 0, 1);
-  transition: .3s cubic-bezier(0, 0.5, 0, 1);
+  -webkit-transition: .3s cubic-bezier(0, 1, 0.5, 1);
+  -moz-transition: .3s cubic-bezier(0, 1, 0.5, 1);
+  -o-transition: .3s cubic-bezier(0, 1, 0.5, 1);
+  -ms-transition: .3s cubic-bezier(0, 1, 0.5, 1);
 }
 
+.orbitalMenu nav,
 .orbitalMenu .switch,
 .orbitalMenu.hidden a {
   -webkit-transition: .3s cubic-bezier(1, 0, .58, 1);
@@ -75,6 +87,11 @@
   -ms-transform: scale(.1) rotate(180eg);
   -o-transform: scale(.1) rotate(180deg);
   transform: scale(.1) rotate(180deg);
+}
+
+.orbitalMenu .switch,
+.orbitalMenu.hidden a,
+.orbitalMenu a {
   left: 50%;
   top: 50%;
 }
@@ -86,12 +103,5 @@
   -ms-transform: none;
   -o-transform: none;
   transform: none;
-  cursor: pointer;
-
 }
 
-.orbitalMenu .switch {
-  left: 50%;
-  top: 50%;
-  cursor: pointer;
-}

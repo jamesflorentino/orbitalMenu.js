@@ -1,20 +1,41 @@
 <!DOCTYPE>
 <title>orbitalMenu.js</title>
+<meta property="og:title" content="orbitalMenu.js - An animated circular menu."/>
+  <meta property="og:url" content="http://jamesflorentino.com/orbitalmenu/"/>
+  <meta property="og:image" content="http://jamesflorentino.com/orbitalmenu/fb.png"/>
+  <meta property="og:description" content="orbitalMenu.js is an animated circular menu inspired from Path's UI."/>
 <link href="css/site.css" rel="stylesheet" />
-<link href="css/orbitalMenu.css" rel="stylesheet" />
+<link href="css/orbitalmenu.css" rel="stylesheet" />
 <script type="text/javascript" src="js/orbitalMenu.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 
 <h1>Orbital Menu</h1>
 
-<div id="controls">
-  <nav class="orbitalMenu">
+<div id="controls" class="orbitalMenu">
+  <nav>
     <a class="photos">Ph</a>
     <a class="places">Pl</a>
     <a class="thought">Th</a>
     <a class="music">Mu</a>
     <a class="sleep">Sl</a>
     <a class="people">Pe</a>
-    <div class="switch">+</div>
   </nav>
+  <div class="switch">+</div>
 </div>
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-6984974-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+ return;
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+
+  s.parentNode.insertBefore(ga, s);
+})();
+</script>

@@ -2,38 +2,41 @@ var OrbitalMenu = (function() {
 
   function App(e) {
 
-    var el, toggleButton, items, logs, item, centerX, centerY, i, left, top, angle, elevation, radius, radian, _this;
-
     _this = this;
 
     /** menu elements **/
-    container = document.getElementById(e.id);
-    el = container.getElementsByClassName('orbitalMenu')[0];
-    toggleButton = el.getElementsByClassName('switch')[0];
-    items = el.getElementsByTagName("a");
+    this.container = document.getElementById(e.id);
+    this.el = this.container.getElementsByTagName('nav')[0];
+    this.toggleButton = this.container.getElementsByClassName('switch')[0];
 
-    this.items = [];
-    this.el = el;
-
-    /** basic trig **/
-    centerX = el.clientWidth * 0.5;
-    centerY = el.clientWidth * 0.5;
-    elevation = 360 / items.length;
-    angle = 30;
-    radius = el.clientWidth * 0.5;
 
     /** events **/
-    toggleButton.addEventListener('click', function() {
+    this.toggleButton.addEventListener('click', function() {
       return _this.visible ? _this.hide() : _this.show();
     });
 
-    /** loop da whoop **/
+    this.refresh();
+    
+  }
+
+  App.prototype.refresh = function() {
+
+    var items, centerX, centerY, elevation, radius, radian, item, i, left, top;
+    
+    items = this.el.getElementsByTagName("a");
+
+    centerX = this.el.clientWidth * 0.5;
+    centerY = this.el.clientHeight * 0.5;
+    elevation = 360 / items.length;
+    radius = this.el.clientWidth * 0.5;
+
     i = 0;
+    this.items = [];
     while ((item = items.item(i++))) {
 
       radian = elevation * i * (Math.PI / 180);
-      left = Math.sin(radian) * radius + centerX;
-      top = Math.cos(radian) * radius + centerY;
+      left = Math.sin(radian) * centerX + centerX;
+      top = Math.cos(radian) * centerY + centerY;
       item.style.webkitTransitionDelay =
       item.style.MozTransitionDelay =
       item.style.oTransitionDelay =
@@ -41,34 +44,37 @@ var OrbitalMenu = (function() {
       item.style.transitionDelay = i * 0.03 + 's';
 
       item.data = {
-        left: left,
-        top: top,
-        centerLeft: centerX,
-        centerTop: centerY
-      };
-
+        left: left + 'px',
+        top: top + 'px',
+        centerLeft: centerX + 'px',
+        centerTop: centerY + 'px'
+      }
       this.items.push(item);
-      this.hide();
     }
-  }
+    this.hide();
+  };
 
   App.prototype.show = function() {
-    this.visible = true;
-    this.el.className = 'orbitalMenu visible';
+    this.container.className = "orbitalMenu visible";
     this.items.forEach(function(item) {
-      item.style.left = item.data.left + 'px';
-      item.style.top = item.data.top + 'px';
+      item.style.left = item.data.left;
+      item.style.top = item.data.top;
     });
+    this.visible = true;
   };
 
   App.prototype.hide = function() {
-    this.visible = false;
-    this.el.className = 'orbitalMenu hidden';
+    this.container.className = "orbitalMenu hidden";
     this.items.forEach(function(item) {
-      item.style.left = item.data.centerLeft + 'px';
-      item.style.top = item.data.centerTop + 'px';
+      item.style.left = item.data.centerLeft;
+      item.style.top = item.data.centerTop;
     });
+    this.visible = false;
   };
+
+  function removeClassReference(className, string) {
+    return className.replace(string, '');
+  }
 
   return App;
 
